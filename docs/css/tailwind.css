@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .gradient-at-10{
+        background-size: 100% 10%;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+}
