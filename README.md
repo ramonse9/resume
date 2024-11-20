@@ -1,6 +1,6 @@
 # Resume
 
-##Tailwindcss code
+## Tailwindcss code
 
 Run `npm run tailDev`
 
