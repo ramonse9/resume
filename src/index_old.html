@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="./css/estilos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">       
+    
+    <title>My Resume</title>
+
+    <script>
+        const storageThemeValue = localStorage.getItem('theme')
+        const systemColorScheme = window.matchMedia(('(prefers-color-scheme: dark)')).matches ? 'dark':'light'
+        const newThemePage = storageThemeValue ?? systemColorScheme
+
+        console.log("newThemePage ", newThemePage)
+
+        document.documentElement.setAttribute('data-theme', newThemePage)
+
+        console.log(systemColorScheme)
+    </script>
+
+
+</head>
+<body class="font-quicksand bg-background dark:bg-dark-background mb-6">
+    <div class="w-[90%] mt-4 mx-auto grid gap-4 md:grid-cols-[2fr_3fr] max-w-screen-xl">
+        <div class="md:grid md:grid-flow-row md:auto-rows-max md:gap-4 space-y-4 md:space-y-0">
+            <section class="bg-main-background flex flex-col gap-2 rounded-lg overflow-hidden dark:bg-dark-main-background">
+                
+                <div class="relative bg-resume w-full h-80 bg-cover bg-center">
+                    <div class="absolute inset-0 bg-gradient-to-t from-white to-transparent z-10
+                                dark:from-dark-main-background dark:to-transparent gradient-at-10" ></div>
+                    <img src="./assets/me_.jpg" alt="me" class="absolute bottom-4 left-4 aspect-square object-cover rounded-full border-4 border-section-background max-w-40 z-20 dark:border-dark-main-background"> 
+                </div>                
+
+                <div class="grid grid-flow-col dark:text-dark-h2">
+
+                    <div class="px-6">
+                        <h2 class="text-xl font-bold">
+                            Ramón Antonio Guzmán Beltrán
+                        </h2>
+                        <h1 class="text-lg">
+                            Full Stack Developer | México
+                        </h1>    
+                    </div>
+                    <div class="justify-items-end px-6">
+                        <div class=" bg-[radial-gradient(circle,_rgba(_0,_0,_255,_0.8),_rgba(_37,_99,_235,_0.1))] rounded-full aspect-square p-1 animate-pulse flex items-center justify-center">
+                            <input type="checkbox" id="switch" class="peer hidden" data-id="switch-theme">
+                            <label for="switch" class="cursor-pointer z-20">
+                                <svg id="theme-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-6 text-white">
+                                    <path fill="currentColor" d="M20.742 13.045a8.088 8.088 0 0 1-2.077.271c-2.135 0-4.14-.83-5.646-2.336a8.025 8.025 0 0 1-2.064-7.723A1 1 0 0 0 9.73 2.034a10.014 10.014 0 0 0-4.489 2.582c-3.898 3.898-3.898 10.243 0 14.143a9.937 9.937 0 0 0 7.072 2.93 9.93 9.93 0 0 0 7.07-2.929 10.007 10.007 0 0 0 2.583-4.491 1.001 1.001 0 0 0-1.224-1.224zm-2.772 4.301a7.947 7.947 0 0 1-5.656 2.343 7.953 7.953 0 0 1-5.658-2.344c-3.118-3.119-3.118-8.195 0-11.314a7.923 7.923 0 0 1 2.06-1.483 10.027 10.027 0 0 0 2.89 7.848 9.972 9.972 0 0 0 7.848 2.891 8.036 8.036 0 0 1-1.484 2.059z">
+                                    </path>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-section-background p-4 space-y-4 mx-2 my-3 rounded-md text-gray-500 
+                            dark:bg-dark-section-background dark:text-dark-text">
+                    <p>
+                        Full-stack developer with 17+ years of experience in building web apps.
+                    </p>
+                    
+                    <ul class="flex gap-2 flex-wrap">
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">JavaScript (ES6)</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Typescript</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Angular</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Vue JS</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Nuxt 3</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Node JS</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Express JS</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Nest JS</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">C#</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">.Net</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">HTML5</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">CSS3</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Tailwindcss</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Flowbite</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Primevue</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Bootstrap</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Materialize</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Vuetify</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">REST API</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Web Sockets</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">JWT (JSON Web Tokens)</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">SQL Server</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">MySql</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">PostgreSQL</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Oracle</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Mongo DB</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">GIT</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">TFS</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Tortoise</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Postman</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Insomnia</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Photoshop</li>
+                        <li class="text-sm bg-badge-background px-2 py-1 rounded-md dark:bg-dark-badge-background">Premiere</li>
+
+                    </ul>
+                    
+                    <a href="./assets/resume_.pdf" class="bg-download-background block text-center text-white rounded-md font-bold text-sm py-2 flex gap-2 justify-center dark:text-dark-text">Download CV 
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 animate-bounce">
+                            <path fill="currentColor" d="m12 16 4-5h-3V4h-2v7H8z"></path><path fill="currentColor" d="M20 18H4v-7H2v7c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2v-7h-2v7z"></path>
+                        </svg>
+                    </a>                   
+
+                </div>
+
+            </section>
+            <section class="bg-main-background flex flex-col gap-2 rounded-lg dark:bg-dark-main-background">
+                <h2 class="text-xl font-bold px-6 pt-4 dark:text-dark-h2">About Me</h2>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md flex flex-col gap-3 dark:bg-dark-section-background">
+                    <!--
+                    <p class="text-gray-500 border-b dark:text-dark-text">I love my profession, I am passionate about using technology to solve real-world problems and I also find a balance between professional and recreational, some of my hobbies are spend time with my family, travel and see new places, motorcycles, music,  weight training, science fiction series and movies</p>
+                    -->
+                    <p class="text-gray-500 border-b dark:text-dark-text">I love what I do — building technology that solves meaningful problems and improves lives. I bring a strong sense of responsibility, clear communication, and adaptability to every project, always striving for excellence without losing sight of the human side of software. My personal life keeps me balanced: I enjoy time with my family, exploring new places, riding motorcycles, listening to music, training, and diving into sci-fi stories that spark imagination.</p>
+
+                    <ul class="flex flex-wrap gap-6 dark:text-dark-text">
+                        <li class="font-semibold flex gap-2">
+                            
+                            <a href="https://ramonse9.github.io/resume" class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 ">
+                                    <path fill="currentColor" d="M10 6v2H5v11h11v-5h2v6a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1zm11-3v8h-2V6.413l-7.793 7.794l-1.414-1.414L17.585 5H13V3z"></path>
+                                </svg>
+                                ramonse9.github.io/resume</a>
+                        </li>
+                        <li class="font-semibold flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4"><path fill="currentColor" d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"></path>
+                            </svg>                        
+                            ramonantoniojr@gmail.com
+                        </li>
+                    </ul>
+                </div>                
+            </section>
+            <section class="bg-main-background flex flex-col gap-2 rounded-lg dark:bg-dark-main-background">
+                <h2 class="text-xl font-bold px-6 pt-4 dark:text-dark-h2">Information</h2>
+                <div class="bg-section-background grid grid-cols-2 px-4 py-2 text-gray-500 mx-2 my-3 rounded-md dark:bg-dark-section-background dark:text-dark-text">
+                    <div>Location</div>
+                    <div class="text-right">Culiacán, Sinaloa, México</div>
+                    <div>Age</div>
+                    <div class="text-right">39 years old</div>
+                    <div>Phone</div>
+                    <div class="text-right">+52 6671043281</div>
+                </div>            
+            </section>
+            <section class="bg-main-background flex flex-col rounded-lg dark:bg-dark-main-background">
+                <h2 class="text-xl font-bold px-6 pt-4 dark:text-dark-h2">Education</h2>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div>
+                        <h3 class="font-semibold dark:text-dark-h2">Bachelor's degree acquired in computer science</h3>
+                        <ul class="flex text-gray-500 text-sm gap-5">
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                    <path fill="currentColor" d="M4 11.333L0 9l12-7l12 7v8.5h-2v-7.333l-2 1.166v6.678l-.223.275A9.983 9.983 0 0 1 12 22a9.983 9.983 0 0 1-7.777-3.714L4 18.011zM6 12.5v4.792A7.979 7.979 0 0 0 12 20a7.978 7.978 0 0 0 6-2.708V12.5L12 16zM3.97 9L12 13.685L20.03 9L12 4.315z"></path>
+                                </svg>
+                                Universidad Autónoma de Sinaloa
+                            </li>                          
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                    <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                                </svg>
+                                2003 - 2008
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>        
+        <div class="md:grid md:grid-flow-row md:auto-rows-max md:gap-4 space-y-4 md:space-y-0">
+            <section class="bg-main-background flex flex-col rounded-lg dark:bg-dark-main-background">
+                <h2 class="text-xl font-bold px-6 pt-4 pb-2 dark:text-dark-text">Experience</h2>
+
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div class="flex justify-between">
+                        <h3 class="font-semibold dark:text-dark-h2">Web Developer</h3>
+                        <!--
+                            <a href="https://vivaro.com" class="text-sm bg-badge-background px-1 py-1 rounded-md dark:bg-dark-main-background dark:text-dark-h2"></a>
+                        -->
+                    </div>
+                    <ul class="grid grid-cols-2 text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                <path d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z"></path>
+                            </svg>
+                            Freelance
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            March 2025 - Present
+                        </li>
+                    </ul>
+                    <p class="text-gray-500 dark:text-dark-text">I'm developing a multi-tenant SaaS (Software-as-a-Service) solution that streamlines customer management, vehicle tracking, service history logging with visual evidence, and invoicing for service-based companies. All in one place.</p>
+                </div>
+                
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div class="flex justify-between">
+                        <h3 class="font-semibold dark:text-dark-h2">Web Developer</h3>
+                        <a href="https://vivaro.com" class="text-sm bg-badge-background px-1 py-1 rounded-md dark:bg-dark-main-background dark:text-dark-h2">vivaro.com</a>
+                    </div>
+                    <ul class="grid grid-cols-2 text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                <path d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z"></path>
+                            </svg>
+                            Vivaro
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            January 2022 - February 2025
+                        </li>
+                    </ul>
+                    <p class="text-gray-500 dark:text-dark-text">I have developed a web application to manage all the live events, and to be able to make your broadcasts efficiently, involving suppliers and consumers, supported by real-time notifications.</p>
+                </div>
+                
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div class="flex justify-between">
+                        <h3 class="font-semibold dark:text-dark-h2">Web Developer</h3>
+                        <a href="https://sukarne.com" class="text-sm bg-badge-background px-1 py-1 rounded-md dark:bg-dark-main-background dark:text-dark-h2">sukarne.com</a>
+                    </div>
+                    <ul class="grid grid-cols-2 text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                <path d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z"></path>
+                            </svg>
+                            Su Karne
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            January 2020 - December 2021
+                        </li>
+                    </ul>
+                    <p class="text-gray-500 dark:text-dark-text">I have developed a web application, it is an audit control with notifications and messages
+                        in real time, other web application to HR to track positive and negative actions of staff,
+                        and more one to keep control of the pending tasks between boss and collaborator.</p>
+                </div>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div class="flex justify-between">
+                        <h3 class="font-semibold dark:text-dark-h2">Web Developer</h3>
+                        <a href="https://primuslabs.com" class="text-sm bg-badge-background px-1 py-1 rounded-md dark:bg-dark-main-background dark:text-dark-h2">primuslabs.com</a>
+                    </div>
+                    <ul class="grid grid-cols-2 text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                <path d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z"></path>
+                            </svg>
+                            Spyral Systems / Primus Labs 
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            November 2018 - January 2020
+                        </li>
+                    </ul>
+                    <p class="text-gray-500 dark:text-dark-text">The company offers analysis services to preserve the food security of crop producers.</p>
+                </div>                
+
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div class="flex justify-between">
+                        <h3 class="font-semibold dark:text-dark-h2">Web Developer</h3>
+                        <a href="https://salud-digna.org" class="text-sm bg-badge-background px-1 py-1 rounded-md dark:bg-dark-main-background dark:text-dark-h2">salud-digna.org</a>
+                    </div>
+                    <ul class="grid grid-cols-2 text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                <path d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z"></path>
+                            </svg>
+                            Salud Digna
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            February 2017 - September 2018
+                        </li>                    
+                    </ul>
+                    <p class="text-gray-500 dark:text-dark-text">The company offers preventive and diagnostic health services for the general public.</p>                
+                </div>
+
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div class="flex justify-between">
+                        <h3 class="font-semibold dark:text-dark-h2">Web Developer</h3>
+                        <a href="https://www.dafi.com.mx/" class="text-sm bg-badge-background px-1 py-1 rounded-md dark:bg-dark-main-background dark:text-dark-h2">dafi.com.mx</a>
+                    </div>
+                    <ul class="grid grid-cols-2 text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                <path d="M20 6h-3V4c0-1.103-.897-2-2-2H9c-1.103 0-2 .897-2 2v2H4c-1.103 0-2 .897-2 2v11c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V8c0-1.103-.897-2-2-2zm-5-2v2H9V4h6zM8 8h12v3H4V8h4zM4 19v-6h6v2h4v-2h6l.001 6H4z"></path>
+                            </svg>
+                            Dafi S.C.
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            January 2007 - December 2016
+                        </li>                    
+                    </ul>
+                    <p class="text-gray-500 dark:text-dark-text">The company offers financial services like investments, loans, life insurance, funeral expenses.</p>
+                </div>
+            </section>
+            <section class="bg-main-background flex flex-col rounded-lg dark:bg-dark-main-background">
+                <h2 class="text-xl font-bold px-6 pt-4 dark:text-dark-h2">Microsoft Certifications</h2>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <h3 class="font-semibold dark:text-dark-h2">Programming in HTML5 with Javascript and CSS3</h3>
+                    <ul class="flex text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" ><path fill="currentColor" d="M21 5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5zM5 19V5h14l.002 14H5z"></path><path d="M7 7h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6z"></path>
+                            </svg>
+                            Score 957
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            May, 2013
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <h3 class="font-semibold dark:text-dark-h2">Administring Microsoft SQL Server 2012 Databases</h3>
+                    <ul class="flex text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" ><path fill="currentColor" d="M21 5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5zM5 19V5h14l.002 14H5z"></path><path d="M7 7h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6z"></path>
+                            </svg>
+                            Score 866
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            May, 2013
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <h3 class="font-semibold dark:text-dark-h2">TS: Microsoft .NET Framework 2.0, - Web-Based Client</h3>
+                    <ul class="flex text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" ><path fill="currentColor" d="M21 5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5zM5 19V5h14l.002 14H5z"></path><path d="M7 7h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6z"></path>
+                            </svg>
+                            Score 965
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            July, 2009
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <h3 class="font-semibold dark:text-dark-h2">TS: Microsoft .Net Frameworks - Application Development</h3>
+                    <ul class="flex text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" ><path fill="currentColor" d="M21 5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5zM5 19V5h14l.002 14H5z"></path><path d="M7 7h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6z"></path>
+                            </svg>
+                            Score 894
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            June, 2009
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <h3 class="font-semibold dark:text-dark-h2">Developing and Implementing Web Applications with Microsoft Visual C# .NET and Microsoft Visual Studio .NET</h3>
+                    <ul class="flex text-gray-500 text-sm gap-5">
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" ><path fill="currentColor" d="M21 5c0-1.103-.897-2-2-2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5zM5 19V5h14l.002 14H5z"></path><path d="M7 7h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6zm-4 4h1.998v2H7zm4 0h6v2h-6z"></path>
+                            </svg>
+                            Score 734
+                        </li>
+                        <li class="flex gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                            </svg>
+                            November, 2006
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section class="bg-main-background flex flex-col rounded-lg dark:bg-dark-main-background">
+                <h2 class="text-xl font-bold px-6 pt-4 dark:text-dark-h2">Conferences</h2>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div>
+                        <h3 class="font-semibold dark:text-dark-h2">CPMX 2017 - Campus Party</h3>
+                        <ul class="flex text-gray-500 text-sm gap-5">
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                    <path fill="currentColor" d="m12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zm4.95-7.778a7 7 0 1 0-9.9 0L12 20.9zM12 13a2 2 0 1 1 0-4a2 2 0 0 1 0 4"></path>
+                                </svg>
+                                Guadalajara, Jalisco
+                            </li>
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                    <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                                </svg>
+                                2017
+                            </li>
+                        </ul>
+                    </div>                
+                </div>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div>
+                        <h3 class="font-semibold dark:text-dark-h2">WPC 2015 - Microsoft Worlwide Partner Conference</h3>
+                        <ul class="flex text-gray-500 text-sm gap-5">
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                    <path fill="currentColor" d="m12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zm4.95-7.778a7 7 0 1 0-9.9 0L12 20.9zM12 13a2 2 0 1 1 0-4a2 2 0 0 1 0 4"></path>
+                                </svg>
+                                Orlando, Florida
+                            </li>
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                    <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                                </svg>
+                                2015
+                            </li>
+                        </ul>
+                    </div>                
+                </div>
+                <div class="bg-section-background px-4 py-2 mx-2 my-3 rounded-md dark:bg-dark-section-background">
+                    <div>
+                        <h3 class="font-semibold dark:text-dark-h2">WPC 2010 - Microsoft Worlwide Partner Conference</h3>
+                        <ul class="flex text-gray-500 text-sm gap-5">
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500">
+                                    <path fill="currentColor" d="m12 23.728l-6.364-6.364a9 9 0 1 1 12.728 0zm4.95-7.778a7 7 0 1 0-9.9 0L12 20.9zM12 13a2 2 0 1 1 0-4a2 2 0 0 1 0 4"></path>
+                                </svg>
+                                Washington, DC
+                            </li>
+                            <li class="flex gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 fill-gray-500" >
+                                    <path d="M11 12h6v6h-6z"></path><path d="M19 4h-2V2h-2v2H9V2H7v2H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm.001 16H5V8h14l.001 12z"></path>
+                                </svg>
+                                2010
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
